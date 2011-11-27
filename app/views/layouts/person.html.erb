@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= @title||='任务管理' %></title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= render 'layouts/person_nav' %>
+<div id="content">
+  <div class="side_bar">
+    <%= render 'layouts/side' %>
+  </div>
+  <div class="right_content">
+    <%= yield %>
+  </div>
+</div>
+</body>
+</html>

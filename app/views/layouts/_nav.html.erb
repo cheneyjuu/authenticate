@@ -1,0 +1,30 @@
+<div id="nav">
+  <ul>
+    <li><%= link_to '首页',users_path %></li>
+    <li><%= link_to '功能',features_path %></li>
+    <li><%= link_to '常见问题',faqs_path %></li>
+    <li><a href="#">服务支持</a></li>
+    <li><a href="#">博客</a></li>
+    <li><%= link_to '收集箱', inbox_times_path %></li>
+  </ul>
+  <% if current_user %>
+    <ul>
+      <li>
+        <span>你好：<%= current_user.user_name %></span>
+      </li>
+      <li>
+        <%= link_to '退出登录', session_path(current_user), :method => :delete %>
+      </li>
+    </ul>
+  <% else %>
+    <ul>
+        <li>
+          <a href="<%= login_path %>">登录</a> |
+        </li>
+        <li>
+          <a href="<%= register_path  %>">免费注册</a>
+        </li>
+  </ul>
+  <% end %>
+
+</div>

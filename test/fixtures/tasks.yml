@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  task_name: MyString
+  remark: MyText
+  start_time: 2011-11-27
+  end_time: 2011-11-27
+  task_type: 1
+
+two:
+  task_name: MyString
+  remark: MyText
+  start_time: 2011-11-27
+  end_time: 2011-11-27
+  task_type: 1

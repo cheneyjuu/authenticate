@@ -1,0 +1,27 @@
+<div id="nav">
+  <ul>
+    <li><%= link_to '时间', times_path %></li>
+    <li><%= link_to '情景', times_path %></li>
+    <li><%= link_to '项目', times_path %></li>
+  </ul>
+  <% if current_user %>
+    <ul>
+      <li>
+        <span>你好：<%= current_user.user_name %></span>
+      </li>
+      <li>
+        <%= link_to '退出登录', session_path(current_user), :method => :delete %>
+      </li>
+    </ul>
+  <% else %>
+    <ul>
+        <li>
+          <a href="<%= login_path %>">登录</a> |
+        </li>
+        <li>
+          <a href="<%= register_path  %>">免费注册</a>
+        </li>
+  </ul>
+  <% end %>
+
+</div>
